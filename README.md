@@ -1,4 +1,3 @@
-
 # E-commerce API
 
 Este é um sistema de gerenciamento de um E-commerce, desenvolvido em **Spring Boot**. A API oferece funcionalidades para gerenciar clientes, pedidos e produtos de forma eficiente. Ela também possui integração com o Swagger para facilitar a visualização e interação com os endpoints.
@@ -97,29 +96,32 @@ Aqui estão os principais endpoints da API, que podem ser visualizados e testado
 ### Exemplo de Tabelas
 
 #### Clientes
-| id  | nome      | email               | telefone      | estado   | cidade       | cep       | rua                             |
-| --- | --------- | ------------------- | ------------- | -------- | ------------ | --------- | ------------------------------- | 
+| id  | nome             | email               | telefone      | estado   | cidade        | cep       | rua                               | numero | complemento    | senha                              |
+| --- | ---------------- | ------------------- | ------------- | -------- | ------------- | --------- | --------------------------------- | ------ | -------------- | ---------------------------------- |
 
 
 #### Pedidos
-| id  | cliente_id | status   | total   | data_pedido              | rua                             | numero | bairro      |
-| --- | ---------- | -------- | ------- | ------------------------ | ----------------------------- | ------ | ----------- |
+| id  | cliente_id | status        | total   | data_pedido              | rua                               | numero | bairro         | cep       | cidade       | estado   | complemento | numero_rastreamento         |
+| --- | ---------- | ------------  | ------- | ------------------------ | --------------------------------- | ------ | -------------- | --------- | ------------ | -------- | ----------- | --------------------------- |
+
 
 #### Produtos
-| id  | nome                  | preco   | estoque |
-| --- | --------------------- | ------- | ------- |
+| id  | nome                 | preco   | estoque |
+| --- | -------------------- | ------- | ------- |
+
+
+#### Status History
+| id  | data_alteracao         | status    | pedido_id |
+
 
 ## Swagger UI
 
 A API é documentada usando **Swagger**. Para visualizar a documentação da API e testar os endpoints, acesse a URL:
 
 ```
-http://localhost:8080/swagger-ui/
+[http://localhost:8080/swagger-ui/index.html#/]
 ```
 
 ## Licença
 
-Este projeto está licenciado sob a [MIT License](LICENSE).
-```
-
-Este README proporciona uma visão geral completa de como configurar o projeto, como ele funciona e detalhes sobre o banco de dados e os endpoints da API.
+Não disponível

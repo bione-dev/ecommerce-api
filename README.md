@@ -112,6 +112,7 @@ Aqui estão os principais endpoints da API, que podem ser visualizados e testado
 
 #### Status History
 | id  | data_alteracao         | status    | pedido_id |
+| --- | -------------------- | ------- | ------- |
 
 
 ## Swagger UI

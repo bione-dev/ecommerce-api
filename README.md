@@ -2,6 +2,9 @@
 
 # E-commerce API
 
+
+![Swagger UI](Swagger-UI.png)
+
 Este é um sistema de gerenciamento de um E-commerce, desenvolvido em **Spring Boot**. A API oferece funcionalidades para gerenciar clientes, pedidos e produtos de forma eficiente. Ela também possui integração com o Swagger para facilitar a visualização e interação com os endpoints.
 
 ## Tecnologias Utilizadas

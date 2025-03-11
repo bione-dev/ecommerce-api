@@ -1,3 +1,5 @@
+---
+
 # E-commerce API
 
 Este é um sistema de gerenciamento de um E-commerce, desenvolvido em **Spring Boot**. A API oferece funcionalidades para gerenciar clientes, pedidos e produtos de forma eficiente. Ela também possui integração com o Swagger para facilitar a visualização e interação com os endpoints.
@@ -33,6 +35,24 @@ Este é um sistema de gerenciamento de um E-commerce, desenvolvido em **Spring B
 - **Atualizar produto** (`PUT /api/produtos/{id}`)
 - **Deletar produto** (`DELETE /api/produtos/{id}`)
 - **Listar produtos** (`GET /api/produtos`)
+
+## Validações de Dados
+
+A API implementa validações rigorosas para garantir a integridade e segurança dos dados dos clientes. As seguintes validações são aplicadas:
+
+1. **Validação de E-mail**: Apenas e-mails válidos são aceitos. A API utiliza uma expressão regular para verificar se o formato do e-mail é válido.
+
+2. **Validação de Senha**: As senhas devem ter entre 6 e 8 caracteres e devem conter pelo menos uma letra maiúscula, uma letra minúscula, um número e um caractere especial (como `@`, `#`, `*`, etc.). A senha é criptografada antes de ser salva no banco de dados.
+
+3. **Validação de Nome**: O nome do cliente deve começar com uma letra maiúscula e deve conter pelo menos um sobrenome. O formato da validação exige que a primeira letra de cada nome seja maiúscula, com espaços entre os nomes.
+
+4. **Validação de Telefone**: O telefone é validado para garantir que possua entre 10 e 11 dígitos, considerando o formato com ou sem o código de área.
+
+5. **Validação de CEP**: O CEP é validado para garantir que esteja no formato correto, com 5 dígitos seguidos de um hífen e 3 dígitos adicionais (ex: `12345-678`).
+
+6. **Verificação de Unicidade**: A API verifica se o e-mail e o telefone fornecidos já estão registrados no banco de dados para evitar duplicação de informações.
+
+Essas validações são implementadas na camada de serviço (`ClienteService`) e são aplicadas durante a criação ou atualização de clientes.
 
 ## Endpoints
 
@@ -126,3 +146,5 @@ A API é documentada usando **Swagger**. Para visualizar a documentação da API
 ## Licença
 
 Não disponível
+
+---
